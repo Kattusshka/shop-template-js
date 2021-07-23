@@ -1,0 +1,241 @@
+.breadcrumb
+{
+    font-size: 14px;
+
+    padding: 1rem 0 0 0;
+
+    opacity: .5;
+    background-color: transparent;
+
+    a
+    {
+        color: $color-light;
+    }
+
+    &-item
+    {
+        + .breadcrumb-item::before
+        {
+            content: '>';
+
+            color: $color-light;
+        }
+
+        &.active
+        {
+            color: $color-light;
+        }
+    }
+}
+
+.page-title
+{
+    &__header
+    {
+        font-size: 2.85rem;
+
+        color: $color-light;
+    }
+
+    &__filter
+    {
+        font-size: 1.25rem;
+
+        width: 100%;
+        margin-top: 6px;
+        padding: 3px 10px 5px;
+
+        color: $color-light;
+        border-color: $color-light;
+        background-color: $color-dark;
+    }
+}
+
+.page-content
+{
+    margin-top: 30px;
+}
+
+.item
+{
+    &-wrapper
+    {
+        position: relative;
+
+        margin-bottom: 30px;
+
+        border: 1px solid $color-light;
+
+        .container-fluid
+        {
+            background-color: rgba($color-dark, .5);
+        }
+    }
+
+    &-image
+    {
+        display: flex;
+        overflow: hidden;
+
+        height: 180px;
+
+        background-color: rgba($color-light, .75);
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-title
+    {
+        font-size: 1.75rem;
+
+        padding-top: .75rem;
+
+        color: $color-light;
+    }
+
+    &-description
+    {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+
+        color: $color-light;
+    }
+
+    &-characteristics
+    {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+
+        margin-top: 15px;
+
+        span
+        {
+            display: block;
+
+            margin-top: 7px;
+            margin-bottom: 7px;
+
+            color: $color-light;
+        }
+    }
+
+    &-buttons
+    {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        button
+        {
+            display: block;
+
+            width: 30px;
+            height: 30px;
+            padding: 0;
+
+            &:last-child
+            {
+                margin-top: 5px !important;
+            }
+        }
+    }
+
+    &-price
+    {
+        font-size: 2rem;
+        font-weight: bold;
+
+        text-align: center;
+
+        color: $color-light;
+    }
+
+    &-actions
+    {
+        padding: 15px;
+
+        button
+        {
+            font-weight: bold;
+
+            margin-bottom: 30px !important;
+            padding: 8px 5px 10px;
+
+            text-transform: uppercase;
+
+            color: $color-light;
+            border-color: $color-light;
+            border-radius: 0;
+
+            @media (min-width: 1200px)
+            {
+                font-size: 1.15rem;
+            }
+
+            @media (max-width: 1199px)
+            {
+                font-size: .9rem;
+            }
+
+            &:last-child
+            {
+                margin-bottom: 15px !important;
+            }
+
+            &:hover
+            {
+                color: $color-dark;
+                border-color: $color-light;
+                background-color: rgba($color-light, .75);
+            }
+
+            i
+            {
+                font-size: 1rem;
+
+                margin-left: 5px;
+            }
+        }
+
+        &__cart
+        {
+            transition: background-color .5s;
+
+            background-color: rgba($color-light, .2);
+
+            &.disabled,
+            &:disabled,
+            &.active,
+            &:active
+            {
+                opacity: 1;
+                color: $color-light !important;
+                border-color: $color-light !important;
+                background-color: rgba($color-light, .1) !important;
+            }
+
+            &:focus
+            {
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+.page-pagination
+{
+    &__more
+    {
+        font-size: 2rem;
+
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        a
+        {
+            color: $color-light;
+        }
+    }
+}
